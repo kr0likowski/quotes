@@ -23,10 +23,11 @@ function changeColor(){
         $(this).html(author[quoteIndex]);
         $(this).animate({opacity:1});
     });
-    $('#bg').animate({},'slow', function() {
-        $(this).css("background-color",colors[colorIndex]);
-        $(this).animate({});
-    });
+
+    $( "body").animate({
+        backgroundColor: colors[colorIndex]
+    }, 1000 );
+
     $('.new-quote').animate({opacity:0},'slow', function() {
         $(this).css("background-color",colors[colorIndex]);
         $(this).animate({opacity: 1});
